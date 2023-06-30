@@ -170,12 +170,12 @@ def gerar_relatorios(): #função para gerar relatórios
 
     elif opcao == "2":
         print("\nRelatório de vendas:")
-        print("{:<5} {:<20} {:<10}".format("ID", "Produto", "Quantidade", "Total")) #define o espaço entre cada título
+        print("{:<5} {:<20} {:<10} {:<10}".format("ID", "Produto", "Quantidade", "Total")) #define o espaço entre cada título
         for l, venda in enumerate(vendas, start = 1):
             produto = venda["produto"]
             quantidade = venda["quantidade"]
             total = venda["total"]
-            print("{:<5} {:<20}{:<10}".format(l, produto["nome"], quantidade, total)) #define o espaço entre cada informação
+            print("{:<5} {:<20} {:<10} {:<10}".format(l, produto["nome"], quantidade, total)) #define o espaço entre cada informação
     else:
         print("\n\033[91m{}\033[00m".format("Opção inválida!")) #imprime uma mensagem na cor vermelha
 
